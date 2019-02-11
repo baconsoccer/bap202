@@ -28,7 +28,7 @@ Route::middleware('auth')->group(function() {
     Route::put('/update-password', 'ProfileController@updatePassword')
         ->name('profile.update_password');
     Route::get('/users', 'UserController@list')
-        ->middleware('is_admin')
+        ->middleware('is.admin')
         ->name('user.list');
 
 });
